@@ -5,5 +5,7 @@
     <orderEntry type="jdk" jdkName="Python 3.12 virtualenv at ~/.airflow-env" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="weather_pipeline" />
+    <orderEntry type="module" module-name="Weather_Tourism_Notebook" />
+    <orderEntry type="module" module-name="Nextflix_EDA" />
   </component>
 </module>
