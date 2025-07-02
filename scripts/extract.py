@@ -3,7 +3,6 @@ import pandas as pd
 import os
 import logging
 
-cities = ['Bangkok', 'Istanbul', 'London', 'Hong Kong', 'Mecca', 'Antalya', 'Dubai', 'Macau', 'Paris', 'Kuala Lumpur']
 
 def extract_weather(city: str, api_key: str, date: str) -> bool:
     """
@@ -36,8 +35,11 @@ def extract_weather(city: str, api_key: str, date: str) -> bool:
             'city': city,
             'date': date,
             'temperature': data['main']['temp'],
+            'feels_like': data['main']['feels_like'],
             'humidity': data['main']['humidity'],
             'description': data['weather'][0]['description'],
+            'wind_speed': data['wind']['speed'],
+            'clouds': data['clouds']['all'],
         }
 
         # Creating folder to dump collected data
