@@ -11,8 +11,8 @@ def merge_files(date: str) -> str:
     """
     try:
         # f"data/raw/{date}/weather_{city}.csv"
-        input_dir = f"data/raw/{date}/"
-        output_file = f"data/processed/weather_global.csv"
+        input_dir = f"/home/najaina/data/raw/{date}/"
+        output_file = f"/home/najaina/data/processed/weather_global.csv"
         # Create processed folder if it hasn't been yet
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
@@ -38,7 +38,7 @@ def merge_files(date: str) -> str:
         )
 
         updated_df.to_csv(output_file, index=False)
-        updated_df.to_excel(f"data/processed/weather_global.xlsx", index=False, engine="openpyxl")
+        updated_df.to_excel(f"/home/najaina/data/processed/weather_global.xlsx", index=False, engine="openpyxl")
         print("Output file path : ", output_file)
         return output_file
     except ValueError as e:

@@ -43,11 +43,11 @@ def extract_weather(city: str, api_key: str, date: str) -> bool:
         }
 
         # Creating folder to dump collected data
-        os.makedirs(f"data/raw/{date}", exist_ok=True)
+        os.makedirs(f"~/data/raw/{date}", exist_ok=True)
 
         # Saving data to csv
         pd.DataFrame([weather_data]).to_csv(
-            f"data/raw/{date}/weather_{city}.csv",
+            f"~/data/raw/{date}/weather_{city}.csv",
             index=False
         )
 
