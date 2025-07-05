@@ -21,9 +21,11 @@ def transform_to_star() -> bool:
         # Create dimension tables
         dim_city = df[['city']].drop_duplicates().reset_index(drop=True)
         dim_city['city_id'] = dim_city.index + 1
+        dim_city = dim_city[['city_id', 'city']]
 
         dim_description = df[['description']].drop_duplicates().reset_index(drop=True)
         dim_description['description_id'] = dim_description.index + 1
+        dim_description = dim_description[['description_id', 'description']]
 
         df['date'] = pd.to_datetime(df['date'])
         dim_date = df[['date']].drop_duplicates().reset_index(drop=True)
@@ -32,6 +34,7 @@ def transform_to_star() -> bool:
         dim_date['month'] = dim_date['date'].dt.month
         dim_date['day'] = dim_date['date'].dt.day
         dim_date['weekday'] = dim_date['date'].dt.day_name()
+        dim_date = dim_date[['date_id', 'date', 'year', 'month', 'day', 'weekday']]
 
         # Merge into fact table
         df_star = df.merge(dim_city, on='city').merge(dim_description, on='description').merge(dim_date, on='date')
