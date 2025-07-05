@@ -29,7 +29,7 @@ def transform_to_star() -> bool:
 
         df['date'] = pd.to_datetime(df['date'])
         dim_date = df[['date']].drop_duplicates().reset_index(drop=True)
-        dim_date['date_id'] = dim_date['date'].dt.strftime('%Y%m%d').astype(int)
+        dim_date['date_id'] = dim_date['date'].dt.strftime('%Y%m%d')
         dim_date['year'] = dim_date['date'].dt.year
         dim_date['month'] = dim_date['date'].dt.month
         dim_date['day'] = dim_date['date'].dt.day
