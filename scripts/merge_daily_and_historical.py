@@ -6,7 +6,7 @@ def merge_daily_to_historical() -> bool:
     try:
         historical_path = "/home/najaina/PycharmProjects/historical_weather_data/data/processed/global_history_weather.csv"
         daily_path = "/home/najaina/data/processed/weather_global.csv"
-        output_path = "./data/processed/weather_tourism_dataset.csv"
+        output_path = "/home/najaina/data/weather_tourism_dataset.csv"
 
         if not os.path.exists(historical_path) or not os.path.exists(daily_path):
             logging.warning("One or both input files are missing.")
