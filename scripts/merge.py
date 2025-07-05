@@ -38,11 +38,13 @@ def merge_files(date: str) -> str:
         )
 
         updated_df.to_csv(output_file, index=False)
-        updated_df.to_excel(f"/home/najaina/data/processed/weather_global.xlsx", index=False, engine="openpyxl")
+        # updated_df.to_excel(f"/home/najaina/data/processed/weather_global.xlsx", index=False, engine="openpyxl")
         print("Output file path : ", output_file)
         return output_file
     except ValueError as e:
         logging.error(f"Merge task failed: {e}")
     except Exception as e:
         logging.error(f"Merge task failed: {e}")
+        
+
     return "Merge task failed"
