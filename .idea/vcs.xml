@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$USER_HOME$/PyCharmMiscProject/Weather_Tourism_Notebook" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../historical_weather_etl_pipeline" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

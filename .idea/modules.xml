@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$USER_HOME$/PycharmProjects/Nextflix_EDA/.idea/Nextflix_EDA.iml" filepath="$USER_HOME$/PycharmProjects/Nextflix_EDA/.idea/Nextflix_EDA.iml" />
       <module fileurl="file://$USER_HOME$/PyCharmMiscProject/Weather_Tourism_Notebook/.idea/Weather_Tourism_Notebook.iml" filepath="$USER_HOME$/PyCharmMiscProject/Weather_Tourism_Notebook/.idea/Weather_Tourism_Notebook.iml" />
+      <module fileurl="file://$USER_HOME$/data/.idea/data.iml" filepath="$USER_HOME$/data/.idea/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/weather_etl_pipeline.iml" filepath="$PROJECT_DIR$/.idea/weather_etl_pipeline.iml" />
       <module fileurl="file://$PROJECT_DIR$/../weather_pipeline/.idea/weather_pipeline.iml" filepath="$PROJECT_DIR$/../weather_pipeline/.idea/weather_pipeline.iml" />
     </modules>
