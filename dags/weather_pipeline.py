@@ -2,6 +2,7 @@ from airflow.sdk import DAG
 from airflow.providers.standard.operators.python import PythonOperator
 from datetime import datetime
 
+from weather_etl_pipeline.scripts.transform_to_star import transform_to_star
 from weather_etl_pipeline.scripts.merge_daily_and_historical import merge_daily_to_historical
 from weather_etl_pipeline.scripts.extract import extract_weather
 from weather_etl_pipeline.scripts.merge import merge_files
@@ -44,4 +45,10 @@ with DAG(
         show_return_value_in_logs=True,
     )
 
-    extract_weather_task >> merge_files_task >> merge_daily_to_historical_task
+    transform_to_star = PythonOperator(
+        task_id='transform_to_star',
+        python_callable=transform_to_star,
+        show_return_value_in_logs=True,
+    )
+
+    extract_weather_task >> merge_files_task >> merge_daily_to_historical_task >> transform_to_star
